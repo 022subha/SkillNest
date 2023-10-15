@@ -1,11 +1,18 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/common/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes></Routes>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<div style={{ height: "200vh" }}>Navbar</div>}
+        ></Route>
+      </Routes>
     </BrowserRouter>
   );
 }
